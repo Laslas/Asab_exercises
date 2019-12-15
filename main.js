@@ -238,7 +238,7 @@ do {
 
 console.log('Loop exercises=================');
 
-console.log('Exercise 1');
+console.log('Number 1');
 
 console.log('Using for loop.');
 
@@ -266,7 +266,7 @@ do{
   } while(v <= 10);
   
 
-console.log('Exercise 2');
+console.log('Number 2');
 
 console.log('Using for loop.');
 
@@ -293,22 +293,142 @@ do{
   } while(j >= 0);
   console.log(jArry);
 
-  console.log('Exercise 3')
+  console.log('Number 3');
   let hash = '';
-  for (let i=0; i<6; i++)
+  for (let i=0; i<6; i++);
   {
   hash+='#';
   console.log(hash);
    
   }
-  console.log('Exercise 3')
-  let lang = ['HTML', 'CSS', 'JavaScript']
+  console.log('Number 4');
+  let lang = ['HTML', 'CSS', 'JavaScript'];
 
   for(let i = 0; i <= lang.length; i++){
+      if(lang[i]){
+        console.log(lang[i].toUpperCase());
+      }
     
-    console.log(lang)
+  }
+
+  console.log('Number 5');
+
+  for(let i = 0; i <= 100; i++){
+
+    if(i % 2 == 0){
+      console.log(i)
+    }
+  }
+
+    console.log('Number 6');
+
+    for(let i = 0; i <= 100; i++){
+
+      if(i % 2 == 1){
+        console.log(i);
+      }
+
+
   }
   
+  console.log('Number 7');
+
+  function printAllNums (){
+    let allSum = 0;
+
+    for(i = 0; i <= 100; i++) {
+      allSum = allSum + i;
+    }
+      return allSum;
+  }
+
+  console.log(printAllNums())
+
+  console.log('Number 8');
+
+  function sumOfEvenOdds(n){
+    let allEvens = 0;
+    let allOdds= 0;
+
+    for(i = 0; i <= n; i++){
+      if(i % 2 == 0){
+        allEvens = allEvens + i;
+      } else {
+        allOdds = allOdds + i;
+      }
+
+    }
+    return { evens:allEvens, odds:allOdds}
+  }
+
+const evensOdds = sumOfEvenOdds(100);
+console.log(`The sum of all even numbers between 0 and 100 is ${evensOdds.evens}; and the sum of all odd numbers between 0 and 100 is ${evensOdds.odds}.`);
+
+console.log('Loops end here; and Arrays begin=============');
+
+console.log('Exercise 9');
+
+let emptArry = [];
+
+2. 
+let myArray = ['Banana', 5, true, 9, 'Mangoes'];
+
+console.log('Number 3');
+
+console.log(myArray.length);
+
+console.log('Number 4');
+console.log(`${myArray[0]}, ${myArray[2]}, ${myArray[4]}.`);
+
+let mixedDataTypes = [];
+
+mixedDataTypes.push('Fruits', 7, false, 3.14, 'JavaScript', true);
+
+console.log(mixedDataTypes);
+
+let itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+
+console.log(itCompanies);
+
+console.log(itCompanies.length);
+
+console.log('Number 9');
+console.log(`${itCompanies[0]}, ${itCompanies[3]}, ${itCompanies.slice(-1)}.`);
+
+console.log('Number 10');
+
+for(i = 0; i < itCompanies.length; i++){
+  if(itCompanies[i]){
+    console.log(itCompanies[i]);
+  }
+  
+}
+console.log('Number 11');
+
+for(i = 0; i < itCompanies.length; i++){
+  if(itCompanies[i]){
+    console.log(itCompanies[i].toUpperCase());
+  }
+ 
+}
+console.log('Number 12');
+let singLine = itCompanies.join(', ');
+
+for(i = 0; i < itCompanies.length; i++){
+  if(itCompanies[i]){
+    console.log(`${singLine}; are big IT companies.`);
+  }
+ 
+}
+
+console.log('Number 13');
+
+for (let i = 0; i < itCompanies.length; i++) {
+  if (itCompanies[i].indexOf() == !-1) {
+    console.log(countries[i].toUpperCase())
+  }
+}
+
 
 
 
