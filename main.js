@@ -412,25 +412,82 @@ for(i = 0; i < itCompanies.length; i++){
  
 }
 console.log('Number 12');
-let singLine = itCompanies.join(', ');
+let singArr = itCompanies.slice(0, 6);
+let singLine = singArr.join(', ');
+let lastIn = itCompanies.length - 1;
 
 for(i = 0; i < itCompanies.length; i++){
   if(itCompanies[i]){
-    console.log(`${singLine}; are big IT companies.`);
+    console.log(`${singLine} and ${itCompanies[lastIn]} are big IT companies.`);
   }
  
 }
 
 console.log('Number 13');
 
-for (let i = 0; i < itCompanies.length; i++) {
-  if (itCompanies[i].indexOf() == !-1) {
-    console.log(countries[i].toUpperCase())
+function checkComp(comp) {
+
+  if (itCompanies.indexOf(comp) !== -1) {
+    console.log(`The company: ${comp} exists here.`);
+
+  }else{
+    console.log(`The company: ${comp} is not found.`);
   }
+  
 }
 
+console.log(checkComp('Snubz'));
+
+console.log('Number 14');
+
+let newLine = [];
+let lineNew = newLine.join(', ');
+
+for(i = 0; i < itCompanies.length; i++){
+  if(itCompanies[i].match(/o+o/ig)){
+
+    newLine.push(itCompanies[i]);
+   
+  }
+  
+}
+console.log(newLine.toString());
+
+console.log('Number 15');
+
+console.log(itCompanies.sort());
+
+console.log('Number 16');
+
+let revArr = [];
+
+for(let i = itCompanies.length - 1; i >= 0; i--){
+  revArr.push(itCompanies[i]);
+}
+console.log(revArr.join(', '));
+
+console.log('Number 17');
+
+console.log(itCompanies.reverse());
+
+console.log('Number 18');
+
+console.log(itCompanies.slice(0, 3));
+
+console.log('Number 19');
+
+console.log(itCompanies.slice(4));
+
+console.log('Number 20');
+
+console.log(itCompanies.splice(3, 1));
+
+console.log('Number 21');
+console.log(itCompanies.shift());
+
+console.log('Number 22');
 
 
-
-
+console.log('Number 23');
+console.log(itCompanies.pop());
 
