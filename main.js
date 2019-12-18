@@ -443,7 +443,7 @@ console.log('Number 14');
 let newLine = [];
 let lineNew = newLine.join(', ');
 
-for(i = 0; i < itCompanies.length; i++){
+for(let i = 0; i < itCompanies.length; i++){
   if(itCompanies[i].match(/o+o/ig)){
 
     newLine.push(itCompanies[i]);
@@ -486,8 +486,151 @@ console.log('Number 21');
 console.log(itCompanies.shift());
 
 console.log('Number 22');
-
+console.log(itCompanies.splice(2, 1));
 
 console.log('Number 23');
 console.log(itCompanies.pop());
+
+console.log('Number 24')
+itCompanies.length = 0;
+console.log(itCompanies);
+
+
+console.log('Functions===================');
+
+console.log('Exercise 10');
+
+function fillName() {
+  var lastName = 'Ineg';
+  var firstName = 'Usun';
+  
+  var fallName = `${firstName} ${lastName}`;
+  console.log(fallName);
+} 
+fillName();
+
+
+function allName(firstName, lastName) {
+  // var firstName = 'Usun';
+  // var lastName = 'Ineg';
+  var fullName = `Your full name is ${firstName} ${lastName}`;
+
+  return fullName;
+}
+
+console.log(allName('James', 'Dean'));
+
+function addNumbers(x, y) {
+  let sum = x + y;
+  return sum;
+}
+
+console.log(addNumbers(5, 6));
+
+function areaOfRectangle(length, width) {
+  let area = length * width;
+
+  return `The area of a rectangle with length: ${length}cm and width: ${width}cm is = ${area}cm.`;
+}
+
+console.log(areaOfRectangle(4, 10));
+
+function volumeOfRectPrism(length, width, height) {
+  let volume = length * width * height;
+
+  return `The volume of a rectangle prism with length: ${length}cm, width: ${width}cm and height: ${height} is = ${volume}.`;
+}
+
+console.log(volumeOfRectPrism(10, 5, 7));
+
+function perimeterOfRectangle(length, width) {
+  let perimeter = 2 *(length + width);
+
+  return `The perimeter of a rectangle with length: ${length}cm and width: ${width}cm is = ${perimeter}cm.`;
+}
+
+console.log(perimeterOfRectangle(7, 34));
+
+function areaOfCircle(radius) {
+  let areaC = 3.14 * radius ** 2;
+
+  return `The area of a circle with radius: ${radius}cm is = ${areaC}cm.`;
+}
+
+console.log(areaOfCircle(7));
+
+function circumOfCircle(radius) {
+  let circumference = 2 * (3.14 * radius);
+
+  return `The circumference of a circle with radius: ${radius}cm is = ${circumference}cm.`;
+}
+
+console.log(circumOfCircle(3));
+
+function density(mass, volume) {
+  let density1 = mass / volume;
+
+  return `The density of a substance with mass: ${mass} and volume: ${volume} is = ${density1}.`;
+}
+
+console.log(density(65, 6));
+
+function obSpeed(distance, time) {
+  let speed = distance / time;
+
+  return `The speed of an object travelling over ${distance} metres in ${time} seconds is = ${speed} m/s.`;
+}
+
+console.log(obSpeed(500, 120));
+
+function convertCelsiusToFahreinheit(temp){
+  let fahr = (temp * 1.8) + 32;
+
+  return `The equivalent of ${temp} degrees celsius in fahrenheit is: ${fahr} degrees Fahrenheit.`;
+}
+
+console.log(convertCelsiusToFahreinheit(100));
+
+function bmiCalc(weight, height){
+  let bmi = weight/(height ** 2);
+
+  switch(true){
+
+    case (bmi < 18.5):
+      return `Your BMI is: ${bmi}, so you are underweight.`
+      break;
+
+    case (bmi >=18.5 && bmi <= 24.9):
+      return `Your BMI is: ${bmi}, so your weight is normal.`
+      break;
+
+    case (bmi >=25 && bmi <= 29.9):
+      return `Your BMI is: ${bmi}, so you are overweight.`
+      break;
+
+    case (bmi >=30):
+      return `Your BMI is: ${bmi}, so you are obese!`
+      break;
+
+    default:
+      return 'Please give proper Values!!'
+  }
+  }
+
+console.log(bmiCalc(70, 1.76));
+
+
+function findMax(x, y, z){
+  let maxVal = 0;
+  if(x > y){
+    maxVal = x;
+  }else {
+    maxVal = y;
+  } if (z > maxVal){
+    maxVal = z;
+  }
+  return `The maximum value among these three numbers: ${x}, ${y} and ${z} is = ${maxVal}`
+}
+
+console.log(findMax(124, 45, 113));
 
